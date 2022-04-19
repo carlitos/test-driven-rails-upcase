@@ -3,6 +3,6 @@
 <ul class="todos">
   <% @todos.each do |todo| %>
     <li class=" <%= "completed" if todo.completed? %>  "><%= todo.title %></li>
-    <%= button_to "Mark complete", completions_path(todo) %>
+    <%= button_to "Mark complete", todo_completion_index_path(todo) %>
   <% end %>
 </ul>
